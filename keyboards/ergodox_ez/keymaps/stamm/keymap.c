@@ -197,8 +197,15 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     /* case SFT_T(KC_SPC): */
     /*   return TAPPING_TERM + 1250; */
     case E_NUMBERS:
-      return 200;
-    case LT(_2_MOUSE, KC_R):
+    case R_MOUSE:
+    case LSFT_T(KC_A):
+    case LCTL_T(KC_S):
+    case LALT_T(KC_D):
+    case LGUI_T(KC_F):
+    case RGUI_T(KC_J):
+    case RALT_T(KC_K):
+    case RCTL_T(KC_L):
+    case RSFT_T(KC_SCOLON):
       return 200;
     /* case LGUI_T(KC_F): */
     /*   return 50; */
@@ -228,7 +235,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
 
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case LT(_1_NUMBERS, KC_E):
+    case E_NUMBERS:
     case R_MOUSE:
     case LSFT_T(KC_A):
     case LCTL_T(KC_S):
